@@ -14,7 +14,7 @@ import socket
 
 
 def intro(request):
-    return render(request, 'compiler/intro.html')
+    return render(request, 'FE_templates/main.html')
 
 # 컴파일 실행
 def runCode(request):
@@ -115,21 +115,22 @@ def runCode(request):
                     template_data['display_data'] = display_data
 
                     if template_data['result'] == 'ACC':                   
+<<<<<<< HEAD
                         return render(request, 'compiler/result.html', template_data)
+=======
+                        return render(request, 'FE_templates/correct.html', template_data)
+>>>>>>> 61d8307840ccdcedff48f5493de9f407cac4d62b
                     else:
                         return render(request, 'compiler/error.html', template_data)
                     
                 else:
                     return render(request, 'compiler/error.html', {'error': 'Execution failed'})
 
-        else:
-            return HttpResponse("Form is not valid")
-
     # 폼 띄우기
     else:
         form = CodeExecutorForm()
         template_data['form'] = form
-        return render(request, 'compiler/writeCode.html',
+        return render(request, 'FE_templates/index.html',
         {   'form': template_data['form'],
             'problem_title': problem_data_set['problem_title'],
             'problem_description': problem_data_set['problem_description'], 

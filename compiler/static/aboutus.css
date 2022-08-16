@@ -1,0 +1,278 @@
+@font-face {
+    font-family: 'GilbertBold';
+    src: url('/GilbertBoldPreview5.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GilbertColorBold';
+    src: url('/GilbertColorBoldPreview5.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Light';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html {
+    background-color: #f5f9fc;
+    height: 180%;
+}
+
+section {
+    padding-left: 198px;
+    padding-right: 198px;
+}
+
+.all_box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 640px;
+}
+
+.top_box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.bot_box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.light {
+    width: 70px;
+    position: relative;
+    top: 280px;
+    display: block;
+    margin: 0 auto;
+}
+
+.team_logo {
+    position: relative;
+    top: 300px;
+    width: 1000px;
+    display: block;
+    margin: 0 auto;
+}
+
+.explanation {
+    font-family: 'GilbertColorBold';
+    font-size: 28px;
+    color: #545454;
+    text-align: center;
+    position: relative;
+    display: block;
+    top: 300px;
+}
+
+.box1 { /*김지연*/
+    background-color: white;
+    border-radius: 30px;
+    border: 5px solid #fd9f28;
+    padding: 30px;
+    width: 180px;
+    height: 130px;
+    position: absolute;
+    top: 53%;
+    left: 48.5%;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.box2 { /*박미란*/
+    background-color: white;
+    border-radius: 30px;
+    border: 5px solid #b5dbff;
+    padding: 30px;
+    width: 180px;
+    height: 130px;
+    position: absolute;
+    top: 63%;
+    left: 29%;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.box3 { /*최정은*/
+    background-color: white;
+    border-radius: 30px;
+    border: 5px solid #16a8f5;
+    padding: 30px;
+    width: 180px;
+    height: 130px;
+    position: absolute;
+    top: 78%;
+    right: 29%;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.box4 { /*이지수*/
+    background-color: white;
+    border-radius: 30px;
+    border: 5px solid #f8db79;
+    padding: 30px;
+    width: 180px;
+    height: 130px;
+    position: absolute;
+    top: 61%;
+    right: 29%;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.box5 { /*박근영*/
+    background-color: white;
+    border-radius: 30px;
+    border: 5px solid #f583a8;
+    padding: 30px;
+    width: 180px;
+    height: 130px;
+    position: absolute;
+    top: 100%;
+    left: 48.5%;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.name {
+    font-family: 'Pretendard-Bold';
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.age {
+    font-family: 'Pretendard-Bold';
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.intro {
+    font-family: 'Pretendard-Light';
+    font-size: 13px;
+    position: relative;
+}
+
+.call {
+    width: 20px;
+    position: relative;
+    top: 5px;
+}
+
+.github {
+    width: 20px;
+    position: relative;
+    top: 5px;
+}
+
+.num {
+    font-family: 'Pretendard-Light';
+    font-size: 13px;
+    position: relative;
+}
+
+.miran {
+    width: 340px;
+    height: 100%;
+    border-radius: 35px;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    position: relative;
+}
+
+.jiyeon {
+    width: 160px;
+    border-radius: 25px;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+.jeongeun {
+    width: 160px;
+    border-radius: 25px;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+.geunyoung {
+    width: 160px;
+    border-radius: 25px;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+.jisoo {
+    width: 160px;
+    border-radius: 25px;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+.bottom {
+    padding-left: 198px;
+    padding-right: 198px;
+    position: relative;
+    bottom: -1100px;
+    display: flex;
+    justify-content: center;
+}
+
+.com {
+    border-radius: 40px;
+    width: 350px;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    margin-right: 40px;
+}
+
+.bot_text {
+    font-family: 'Pretendard-Light';
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    line-height: 40px;
+    color: #545454;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    height: 220px;
+    width: 100%;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+.f-logo {
+    width: 300px;
+    height: 52px;
+    top: 35px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.Copyright {
+    font-family: 'Pretendard-Light';
+    text-decoration-line: none;
+    color: #828282;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    top: 110px;
+    margin:10px;
+}

@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haru Algorithm</title>
+    <link rel="stylesheet" href="{% static 'search_date.css' %}">
+    <link rel="stylesheet" href="{% static 'TopNav.css' %}">
+    <link rel="stylesheet" href="{% static 'MiddelNav.css' %}">
+     <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <script>
+        // document.getElementById('date_box').value = new Date();
+    </script>
+    <div>
+        {% include "./component/TopNav.html" %}
+        {% include "./component/MiddelNav.html" %}
+        <div class="content">
+            <div class="main">
+               <div class="search-box">
+                    <!-- <form action="." method="post">
+                        <input class="search-text" type="text" placeholder="검색어를 입력해주세요">
+                        <button type="button" class="search-btn" type="sumit"><img class="search-img" src="./search.png"></button>
+                    </form> -->
+                    <form action="{% url 'posts' %}" method="post">
+                        {% csrf_token %}
+                        <input type="date" class="date_box" id="date_box">
+                        <!-- <button type="button" class="search-btn" type="sumit"><img class="search-img" src="./search.png"></button> -->
+                    </form>
+               </div>
+
+               <div class="post">
+                <div class="post_name">
+                    <li>제목</li>
+                    <li>카테고리</li>
+                    <li>컴파일 시간</li>
+                    <li>날짜</li>
+                </div>
+
+                {% for post in posts %}
+                <a id="box_href" href="{% url 'detail' post.id %}">
+                    <div class="post_box">
+                        {{post.question}}
+                        {{post.category}}
+                        {{post.pub_date}}
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

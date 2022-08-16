@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+        <title>Haru Algorithm</title>
+    <link rel="stylesheet" href="{% static 'incorrect1.css' %}">
+    <link rel="stylesheet" href="{% static 'TopNav.css' %}">
+</head>
+
+<body>
+    {% include "./component/TopNav.html" %}
+
+    <section>
+        <img src="{% static 'xlogo.png' %}" class="xlogo">
+        <p class="incorrect1">오답입니다! (1/2)</p>
+        <p class="category">카테고리</p>
+        <div class="box1">
+            <p class="box1_font">#</a>
+        </div>
+        <div class="box1_2">
+            <p class="box1_2font">#</a>
+        </div>
+
+        <div>
+            <p class="lang">언어</p>
+            <form>
+                {% csrf_token %}
+                <select name="language" class="box3">
+                    <option value="none">python</option>
+                    <option value="C" disabled>C</option>
+                    <option value="C++" disabled>C++</option>
+                    <option value="C#" disabled>C#</option>
+                    <option value="Java" disabled>Java</option>
+                    <option value="JavaScript" disabled>JavaScript</option>
+                    <option value="MySQL" disabled>MySQL</option>
+                    <option value="Oracle" disabled>Oracle</option>
+                </select>
+            </form>
+            <p class="box3_font">*다른 언어는 추후 업데이트 될 예정입니다.</p>
+        </div>
+
+        <div>
+            <p class="sscode">소스코드</p>
+            <div>
+                <input type='button' value='복사' id="copybutton" class="copybutton" />
+            </div>
+
+            <div class="code_box">
+                <input type="text" id="input_text" value="input:text영역입니다.">
+            </div>
+        </div>
+
+        <form action="{% url 'problem' %}">
+            <input type='button' value='재채점하기' class="rescore" />
+        </form>
+    </section>
+
+    <script>//복사버튼 구현-전체복사
+        document.getElementById("copybutton").onclick = function(){
+            const input_text = document.getElementById("input_text");
+            input_text.select();
+            document.execCommand('copy');
+        }
+    </script>
+</body>
+
+</html>
